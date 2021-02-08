@@ -1,6 +1,9 @@
 <template>
   <div class="Parameters">
     <h1>page Parameters</h1>
+
+
+
     <div class='Parameters-sidebar'>
         <div class='Parameters-sidebar-section-menu'>
 
@@ -9,7 +12,7 @@
         <label>
 
 
-          <router-link to="/">Accueil</router-link><br/>
+          <router-link to="/about">HomePage</router-link><br/>
           <router-link to="/user">Utilisateur</router-link><br/>
           <router-link to="/Notifications">Notifications</router-link><br/>
           <router-link to="/Parameters">Paramètres</router-link>

@@ -99,7 +99,7 @@ export default {
         <label>
 
 
-          <router-link to="/">Accueil</router-link><br/>
+          <router-link to="/about">HomePage</router-link><br/>
           <router-link to="/user">Utilisateur</router-link><br/>
           <router-link to="/Notifications">Notifications</router-link><br/>
           <router-link to="/Parameters">Paramètres</router-link>

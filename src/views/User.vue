@@ -9,7 +9,7 @@
         <label>
 
 
-          <router-link to="/">Accueil</router-link><br/>
+          <router-link to="/About">HomePage</router-link><br/>
           <router-link to="/user">Utilisateur</router-link><br/>
           <router-link to="/Notifications">Notifications</router-link><br/>
           <router-link to="/Parameters">Paramètres</router-link>
@@ -71,9 +71,6 @@ b { /* used for event dates/times */
   padding: 3em;
 }
 
-.fc { /* the calendar root */
-  max-width: 1100px;
-  margin: 0 auto;
-}
+
 
 </style>
