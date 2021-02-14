@@ -6,24 +6,47 @@
     <div class='notif-sidebar'>
         <div class='notif-sidebar-section-menu'>
 
-        <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQHYyaiHKZxWkw/company-logo_200_200/0/1555486766503?e=1619049600&amp;v=beta&amp;t=bYggFxmZFNLHnMKqtP7Gto2w7dUQGyjbBIzzAxZ0U-U" loading="lazy" alt="Logo de COLAS DIGITAL SOLUTIONS" id="ember62" class="lazy-image ember-view org-top-card-primary-content__logo" title="" style="--darkreader-inline-outline:#ac2622;"/>
+            <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQHYyaiHKZxWkw/company-logo_200_200/0/1555486766503?e=1619049600&amp;v=beta&amp;t=bYggFxmZFNLHnMKqtP7Gto2w7dUQGyjbBIzzAxZ0U-U" loading="lazy" alt="Logo de COLAS DIGITAL SOLUTIONS" id="ember62" class="lazy-image ember-view org-top-card-primary-content__logo" title="" style="--darkreader-inline-outline:#ac2622;" />
 
-        <label>
+            <label>
 
 
-            <router-link to="/about">HomePage</router-link><br/>
-          <router-link to="/user">Utilisateur</router-link><br/>
-          <router-link to="/Notifications">Notifications</router-link><br/>
-          <router-link to="/Parameters">Paramètres</router-link>
-          <router-view></router-view>
-        </label>
+                <router-link to="/about">HomePage</router-link><br />
+                <router-link to="/user">Utilisateur</router-link><br />
+                <router-link to="/Notifications">Notifications</router-link><br />
+                <router-link to="/Parameters">Paramètres</router-link>
+                <router-view></router-view>
 
-      </div>
-  </div>
+            </label>
+            <div>
+                <b-button @click="makeToast()">notif</b-button><br />
+                <b-button @click="makeToast(true)">notif (appended)</b-button>
+            </div>
+        </div>
+
+    </div>
    </div>
   
 </template>
-
+<script>
+    export default {
+        data() {
+            return {
+                toastCount: 0
+            }
+        },
+        methods: {
+            makeToast(append = false) {
+                this.toastCount++
+                this.$bvToast.toast(`notification num ${this.toastCount}`, {
+                    title: 'notif',
+                   
+                    appendToast: append
+                })
+            }
+        }
+    }
+</script>
 <style lang='css'>
 
 h2 {
