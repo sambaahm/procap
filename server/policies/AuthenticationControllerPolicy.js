@@ -14,7 +14,7 @@ module.exports = {
         });
 
 
-        const { error } = schema.validate(req.body)
+        const { error } = schema.validate(req.object)
 
 
         if (error) {
