@@ -13,7 +13,8 @@
                v-model="password"
                placeholder="password" />
         <br />
-
+        <!--<div class="error" v-html="error" />-->
+        <br/>
         <button @click="register"> Register</button>
         <router-link to="/About">register</router-link>
 
@@ -31,16 +32,27 @@
         data () {
             return {
                 email: '',
-                password: ''
+                password: '',
+                error: null
             }
         },
         methods: {
             async register() {
-                await AuthenticationService.register({
-                    email: this.email,
-                    password: this.password
-                })
+                try {
+                    await AuthenticationService.register({
+                        email: this.email,
+                        password: this.password
+                    })
+                } catch (error) {
+                    this.error = error.response.data.error
+                }
             }
         }
     }
 </script>
+<style scoped>
+    .error{
+        color: red;
+    }
+
+</style>

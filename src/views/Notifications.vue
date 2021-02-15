@@ -19,8 +19,8 @@
 
             </label>
             <div>
-                <b-button @click="makeToast()">notif</b-button><br />
-                <b-button @click="makeToast(true)">notif (appended)</b-button>
+                <button @click="makeToast()">notif</button><br />
+                <button @click="makeToast(true)">notif (appended)</button>
             </div>
         </div>
 
