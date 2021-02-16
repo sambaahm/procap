@@ -1,10 +1,21 @@
 <template>
   <div id="app">
-
+      <page-header />
     <router-view/>
   </div>
 </template>
 
+<script>
+// @ is an alias to /src
+import PageHeader from '@/components/Header.vue'
+
+export default {
+  name: 'app',
+  components: {
+    PageHeader
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

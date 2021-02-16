@@ -1,35 +1,57 @@
 <template>
-    <div class="vue-tempalte">
-        <form>
-            <h3>Sign In</h3>
+    <div>
 
-            <div class="form-group">
-                <label>Email address</label>
-                <input type="email" class="form-control form-control-lg" />
-            </div>
+        <h3>Sign In</h3>
 
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" class="form-control form-control-lg" />
-            </div>
+        <input type="email"
+               name="email"
+               v-model="email"
+               placeholder="email" />
+        <br />
+        <input type="password"
+               name="password"
+               v-model="password"
+               placeholder="password" />
+        <br />
+        <div class="error" v-html="error" />
+        <br />
+        <button @click="login"> login</button>
+        <router-link to="/About">register</router-link>
 
-            <router-link to="/About">Sign In</router-link>
-         
+        <p class="forgot-password text-right">
+            Already registered
+            <router-link :to="{name: 'login'}">sign in?</router-link>
+        </p>
 
-            <p class="forgot-password text-right mt-2 mb-4">
-                <router-link to="/forgot-password">Forgot password ?</router-link>
-            </p>
-
-         
-
-        </form>
     </div>
 </template>
 
 <script>
+    import AuthenticationService from '@/services/AuthenticationService'
     export default {
         data() {
-            return {}
+            return {
+                email: '',
+                password: '',
+                error: null
+            }
+        },
+        methods: {
+            async login() {
+                try {
+                    await AuthenticationService.login({
+                        email: this.email,
+                        password: this.password
+                    })
+                } catch (error) {
+                    this.error = error.response.data.error
+                }
+            }
         }
     }
 </script>
+<style scoped>
+    .error {
+        color: red;
+    }
+</style>

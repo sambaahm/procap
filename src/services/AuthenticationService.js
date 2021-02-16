@@ -16,7 +16,23 @@ export default {
             .catch(error => {
                 console.log(error.response)
             })
-        }
+    },
+    login(credentials) {
+        return Api().post('login', credentials).then(response => {
+            console.log(response)
+        })
+
+            //register(credentials) {
+            //return Api()
+            //.post('register')
+            // .then(response => {
+            //   console.log(response)
+            //  })
+
+            .catch(error => {
+                console.log(error.response)
+            })
+    }
 }
 
 //AuthenticationService.register({
