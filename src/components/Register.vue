@@ -13,7 +13,7 @@
                v-model="password"
                placeholder="password" />
         <br />
-        <!--<div class="error" v-html="error" />-->
+        <div class="error" v-html="error" />
         <br/>
         <button @click="register"> Register</button>
         <router-link to="/About">register</router-link>
