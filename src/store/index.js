@@ -4,11 +4,18 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
+    state: {
+        token: null
   },
-  mutations: {
+    mutations: {
+        setToken(state, token) {
+            state.token = token
+        }
   },
-  actions: {
+    actions: {
+        setToken({ commit }, token) {
+            commit('setToken', token)
+        }
   },
   modules: {
   }

@@ -4,6 +4,7 @@ import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
+import PlannigService from '@/services/PlanningService'
 //import { INITIAL_EVENTS, createEventId } from './event-utils'
 
 
@@ -48,7 +49,10 @@ export default {
       currentEvents: []
     }
   },
-
+  
+        async mounted() {
+            this.currentEvents = await PlannigService.index()
+        },
   methods: {
     
 
@@ -94,8 +98,7 @@ export default {
     <div class='testapp-sidebar'>
         <div class='testapp-sidebar-section-menu'>
 
-        <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQHYyaiHKZxWkw/company-logo_200_200/0/1555486766503?e=1619049600&amp;v=beta&amp;t=bYggFxmZFNLHnMKqtP7Gto2w7dUQGyjbBIzzAxZ0U-U" loading="lazy" alt="Logo de COLAS DIGITAL SOLUTIONS" id="ember62" class="lazy-image ember-view org-top-card-primary-content__logo" title="" style="--darkreader-inline-outline:#ac2622;"/>
-
+       
         <label>
 
 

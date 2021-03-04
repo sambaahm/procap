@@ -21,3 +21,4 @@ sequelize.sync()
 
     }) 
 
+//{ force: true } permet de reinatialiser la base de donner
