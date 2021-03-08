@@ -15,15 +15,16 @@
         <br />
         <div class="error" v-html="error" />
         <br />
-        <button @click="login"> login</button>
-        <router-link to="/About">register</router-link>
+        <router-link to="/About">
+            <button @click="login"> login</button>
+            <!--<router-link to="/About">login</router-link>-->
+        </router-link>
+            <p class="forgot-password text-right">
+                Already registered
+                <router-link :to="{name: 'login'}">sign in?</router-link>
+            </p>
 
-        <p class="forgot-password text-right">
-            Already registered
-            <router-link :to="{name: 'login'}">sign in?</router-link>
-        </p>
-
-    </div>
+</div>
 </template>
 
 <script>

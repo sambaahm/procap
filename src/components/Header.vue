@@ -1,17 +1,19 @@
 <template>
-    <v-toolbar fixed class="cyan">
-        <v-toolbar-title class="mr-4">
-            WorkWise
-        </v-toolbar-title>
-    </v-toolbar>
+     <toolbar fixed class="cyan">
+        <header id="header">
+            <div>
+                <a href="index.html">WorkWise</a>
+            </div>
+        </header>
+        </toolbar> 
 
 </template>
 
-<script>
-    export default {
+    <script>
+        export default {
 
-            }
-</script>
-<style scoped>
+                }
+    </script>
+    <style scoped>
 
-</style>
+    </style>

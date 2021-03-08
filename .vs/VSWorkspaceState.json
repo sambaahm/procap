@@ -2,9 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\server",
-    "\\server\\controllers",
-    "\\server\\models"
+    "\\server\\config",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\components",
+    "\\src\\router",
+    "\\src\\services",
+    "\\src\\store",
+    "\\src\\views"
   ],
-  "SelectedNode": "\\server\\app.js",
+  "SelectedNode": "\\src\\components\\HelloWorld.vue",
   "PreviewInSolutionExplorer": false
 }

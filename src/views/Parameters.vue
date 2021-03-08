@@ -1,26 +1,200 @@
 <template>
-  <div class="Parameters">
-    <h1>page Parameters</h1>
+    <div class="Parameters">
+      
 
 
 
-    <div class='Parameters-sidebar'>
-        <div class='Parameters-sidebar-section-menu'>
-
-       
-        <label>
+        <div class='Parameters-sidebar'>
+            <div class='Parameters-sidebar-section-menu'>
 
 
-          <router-link to="/about">HomePage</router-link><br/>
-          <router-link to="/user">Utilisateur</router-link><br/>
-          <router-link to="/Notifications">Notifications</router-link><br/>
-          <router-link to="/Parameters">Paramètres</router-link>
-          <router-view></router-view>
-        </label>
+                <label>
 
-      </div>
-  </div>
-   </div>
+
+                    <router-link to="/about">HomePage</router-link><br />
+                    <router-link to="/user">Utilisateur</router-link><br />
+                    <router-link to="/Notifications">Notifications</router-link><br />
+                    <router-link to="/Parameters">Paramètres</router-link>
+                    <router-view></router-view>
+                </label>
+
+            </div>
+        </div>
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+
+                    <!-- Header -->
+
+
+                    <!-- Page Heading -->
+                    <div class="page-heading">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1>Parameters Page</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Forms -->
+                    <section class="forms">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section-heading">
+                                        <h2>Size & Color</h2>
+                                    </div>
+                                    <form id="contact" action="" method="post">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <select name="category" id="category">
+                                                    <option value="categories" selected>Select front style</option>
+                                                    <option value="Featured">Default</option>
+                                                    <option value="Newest">Classique</option>
+                                                    <option value="Low Price">Moderne</option>
+                                                    <option value="High Price">Programmer</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4">
+                                                <div class="radio-item">
+                                                    <input name="demo-small" type="checkbox" id="demo-priority-small" value="small" checked>
+                                                    <label for="demo-priority-small">Small</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4">
+                                                <div class="radio-item">
+                                                    <input name="demo-medium" type="checkbox" id="demo-priority-medium" value="medium">
+                                                    <label for="demo-priority-medium">Medium</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4">
+                                                <div class="radio-item">
+                                                    <input name="demo-large" type="checkbox" id="demo-priority-large" value="large">
+                                                    <label for="demo-priority-large">Large</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4">
+                                                <div class="circle-item">
+                                                    <input name="demo-priority" type="radio" id="demo-small" value="16-20" checked>
+                                                    <label for="demo-small">White</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4">
+                                                <div class="circle-item">
+                                                    <input name="demo-priority" type="radio" id="demo-medium" value="21-30">
+                                                    <label for="demo-medium">Grey</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4">
+                                                <div class="circle-item">
+                                                    <input name="demo-priority" type="radio" id="demo-old" value="30+">
+                                                    <label for="demo-old">Dark</label>
+                                                </div>
+                                            </div>
+                                            <div class="filled-icon-button">
+                                                <a href="#"><i class="fa fa-check"></i>Save</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!-- Tables -->
+                    <section class="buttons">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section-heading">
+                                        <h2>Buttons</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="filled-rectangle-button">
+                                                <a href="#">Filled Button</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="border-rectangle-button">
+                                                <a href="#">Border Button</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="filled-radius-button">
+                                                <a href="#">Filled Button</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="border-radius-button">
+                                                <a href="#">Border Button</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="filled-rounded-button">
+                                                <a href="#">Filled Button</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="border-rounded-button">
+                                                <a href="#">Border Button</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="filled-icon-button">
+                                                <a href="#"><i class="fa fa-check"></i>Filled Button</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="border-icon-button">
+                                                <a href="#"><i class="fa fa-check"></i>Border Button</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="filled-rectangle-button">
+                                                <a href="#">Filled Button</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="border-rectangle-button">
+                                                <a href="#">Border Button</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="filled-rounded-button">
+                                                <a href="#">Filled Button</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="border-rounded-button">
+                                                <a href="#">Border Button</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+      
+
+        </div>
+    </div>
   
 </template>
 
